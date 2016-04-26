@@ -1,12 +1,15 @@
+require('core-js/es6/reflect');
 require('reflect-metadata');
 var di = require('aurelia-dependency-injection');
+var Factory = di.Factory;
 
 var container = new di.Container();
 container.makeGlobal();
 
-require('./settings');
-require('./thingOne');
+var thingOne = require('./thingOne');
 
-var thingOne = container.get('thingOne');
+var thingOneFactory = container.get(Factory.of(thingOne));
 
-console.log(thingOne);
+var thing = new thingOneFactory('hello');
+
+console.log(thing);

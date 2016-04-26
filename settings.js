@@ -8,5 +8,4 @@ var settings = function settings() {
 };
 
 exports = module.exports = settings;
-
-di.Container.instance.autoRegister(settings, 'settings');
+di.Container.instance.autoRegister(settings);
