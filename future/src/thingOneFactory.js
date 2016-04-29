@@ -1,4 +1,4 @@
-import { Container, inject, factory } from 'aurelia-dependency-injection'
+import { Container, inject } from 'aurelia-dependency-injection'
 import settings from './settings'
 
 @inject(settings)
