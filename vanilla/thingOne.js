@@ -5,6 +5,7 @@ var thingOne = function thingOne(settings, data) {
     this.settings = settings;
     this.data = data;
 }
+
 thingOne.inject = function() {
     return [settings];
 }
