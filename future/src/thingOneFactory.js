@@ -1,4 +1,4 @@
-import { Container, inject } from 'aurelia-dependency-injection'
+import { inject } from 'aurelia-dependency-injection'
 import settings from './settings'
 
 @inject(settings)
@@ -8,5 +8,3 @@ export default class thingOneFactory {
         this.data = data
     }
 }
-
-Container.instance.autoRegister(thingOneFactory)
